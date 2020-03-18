@@ -1,0 +1,16 @@
+.card {
+
+  .card-header {
+    background-color: #ffcf00;
+    color: white;
+  }
+}
+.container {
+  padding: 60px 15px;
+}
+#services {
+  padding-top: 35px;
+  > div {
+    margin-bottom: 30px;
+  }
+}

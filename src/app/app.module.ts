@@ -10,6 +10,8 @@ import { MainComponent } from './main/main/main.component';
 import { NavComponent } from './header/nav/nav.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ContactsService } from './contacts.service';
+import { FirstblockComponent } from './main/firstblock/firstblock.component';
+import { ServicesblockComponent } from './main/servicesblock/servicesblock.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { ContactsService } from './contacts.service';
     HeaderComponent,
     FooterComponent,
     MainComponent,
-    NavComponent
+    NavComponent,
+    FirstblockComponent,
+    ServicesblockComponent
   ],
   imports: [
     BrowserModule,

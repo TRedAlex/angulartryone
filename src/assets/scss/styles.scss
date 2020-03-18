@@ -1,5 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-@import "mediascreen", "variables", "mixin";
+@import "mediascreen", "variables", "mixin", "scss";
 @import url(//fonts.googleapis.com/css?family=Montserrat:400,500,600|Oswald:300,500,700&display=swap&subset=cyrillic-ext);
 
 
@@ -21,33 +21,35 @@ app-root {
   i {
     color: #fdcd00;
     margin-right: 5px;
+    font-size: 24px;
   }
   app-nav {
-    padding: 15px 0;
     -webkit-transition: .6s ease;
-    transition: .6s ease;
+    transition: .8s linear;
     position: absolute;
     top: 100%;
     left: 0;
     width: 100%;
-
     @include responsive(lg) {
-      background-color: #ffffff;
-      box-shadow: 0 0 2px rgba(0,0,0,.12);
-      padding-top: 0;
+      background-color: none;
     }
   }
 }
+.navbar-dark .navbar-nav .nav-link {
+  color: #ffffff;
+}
+.navbar-light .navbar-nav .nav-link {
+  color: rgba(0,0,0,.7);
+}
 #navhead {
   li {
-    margin-right: 35px;
+    margin-right: 0;
     @include responsive(lg) {
-      margin-right: 0;
+      margin-right: 35px;
     }
   }
   a {
     padding: 10px 0;
-    color: #212529;
     &:hover {
       color: #f44336;
       transition: .6s ease;
@@ -58,28 +60,66 @@ app-root {
   }
 }
 app-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
 
   &.sticky-moving {
-    position: sticky;
-    top: -1px;
-    transition: 1s all;
     app-nav {
-      background-color: #333333;
+      background-color: #ffffff;
+      box-shadow: 0 3px 5px 0 hsla(0,0%,68.2%,.5);
     }
   }
 }
+.context {
+  padding:70px 0 40px;
+  @include responsive(md) {
+    padding: 70px 35% 150px 0;
+  }
+}
 .fs34osw300 {
-  font-size: 34px;
+  @include font-size(34px);
   font-weight: 300;
   font-family: 'Oswald', sans-serif;
+
 }
-.fs28mm500 {
-  font-size: 28px;
+.fs65osw500 {
+  @include font-size(65px);
+  font-weight: 500;
+  font-family: 'Oswald', sans-serif;
+}
+.fs50osw600 {
+  @include font-size(50px);
+  font-weight: 700;
+  font-family: 'Oswald', sans-serif;
+}
+.fs18osw500 {
+  @include font-size(18px);
+  font-weight: 500;
+  font-family: 'Oswald', sans-serif;
+}
+.fs18osw500 {
+  @include font-size(18px);
+  font-weight: 500;
+  font-family: 'Oswald', sans-serif;
+}
+.fs20mm500 {
+  @include font-size(20px);
   font-weight: 500;
   font-family: 'Montserrat', sans-serif;
 }
+.fs28mm500 {
+  @include font-size(28px);
+  font-weight: 500;
+  font-family: 'Montserrat', sans-serif;
+}
+.fs14mm400 {
+  @include font-size(14px);
+  font-weight: 400;
+  font-family: 'Montserrat', sans-serif;
+}
 .fs17mm600 {
-  font-size: 17px;
+  @include font-size(17px);
   font-weight: 600;
   font-family: 'Montserrat', sans-serif;
 }

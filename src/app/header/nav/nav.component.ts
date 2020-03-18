@@ -15,7 +15,29 @@ export class NavComponent implements OnInit {
     this.phone = contacnts.phone
    }
 
+   triggerbtn() {
+    let stick = document.getElementById('sticky')
+    let appnav = document.getElementById('appnav')
+    let headernav = document.getElementById('headernav')
+    let buttonnav = document.querySelector('.navbar-toggler').getAttribute('aria-expanded')
+
+    if(buttonnav == 'false') {
+      appnav.style.backgroundColor = 'white'
+      headernav.classList.remove('navbar-dark')
+      headernav.classList.add('navbar-light')
+
+    }
+    if (buttonnav == 'true') {
+      if(!stick.classList.contains('sticky-moving')) {
+        appnav.style.backgroundColor = ''
+        headernav.classList.remove('navbar-light')
+        headernav.classList.add('navbar-dark')
+      }
+    }
+   }
+
   ngOnInit(): void {
+
   }
 
 }
