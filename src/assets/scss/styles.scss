@@ -6,7 +6,7 @@
 * {
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
-  font-size: 14px;
+  @include font-size(14px);
 }
 app-root {
   display: -webkit-box;
@@ -14,7 +14,6 @@ app-root {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
           flex-direction: column;
-  min-height: 2000px;
 }
 .bg-black {
   background-color: #000000;
@@ -76,6 +75,11 @@ app-header {
   @include responsive(md) {
     padding: 70px 35% 150px 0;
   }
+}
+app-footer {
+  background-color: black;
+  color: white;
+  padding: 10px 0;
 }
 .fs34osw300 {
   @include font-size(34px);

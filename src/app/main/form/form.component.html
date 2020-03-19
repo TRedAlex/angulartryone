@@ -1,0 +1,34 @@
+<div class="bg-img">
+  <div class="container">
+    <p class="fs50osw600 text-center text-uppercase text-white">
+      заказать совиную почту
+    </p>
+    <form class="text-center" [formGroup]="questionerForm" (ngSubmit)="onFormSubmit()">
+      <mat-form-field appearance="fill">
+        <mat-label>
+          Введите ваше имя
+        </mat-label>
+        <input matInput placeholder="Ваше имя" required>
+        <mat-error>
+          *ngIf="questionerForm.get('name').hasError('required')">Заполните поле
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>
+          Введите телефон
+        </mat-label>
+        <input matInput placeholder="Ваше номер">
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>
+          Введите вашу почту
+        </mat-label>
+        <input matInput placeholder="Ваше почта" required>
+        <mat-error>
+          *ngIf="questionerForm.get('email').hasError('required')">Заполните поле
+        </mat-error>
+      </mat-form-field>
+      <button type="submit" mat-flat-button color="warn"><mat-icon>save</mat-icon></button>
+    </form>
+  </div>
+</div>

@@ -1,6 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {MatButtonModule} from '@angular/material/button';
+import { MatButtonModule } from '@angular/material/button';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { FormsModule, ReactiveFormsModule }   from '@angular/forms';
+import { MatIconModule } from '@angular/material/icon'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,6 +16,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ContactsService } from './contacts.service';
 import { FirstblockComponent } from './main/firstblock/firstblock.component';
 import { ServicesblockComponent } from './main/servicesblock/servicesblock.component';
+import { FormComponent } from './main/form/form.component';
+import { RewiewsComponent } from './main/rewiews/rewiews.component';
+
 
 @NgModule({
   declarations: [
@@ -21,13 +28,20 @@ import { ServicesblockComponent } from './main/servicesblock/servicesblock.compo
     MainComponent,
     NavComponent,
     FirstblockComponent,
-    ServicesblockComponent
+    ServicesblockComponent,
+    FormComponent,
+    RewiewsComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatButtonModule
+    MatButtonModule,
+    MatFormFieldModule,
+    MatInputModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatIconModule
   ],
   providers: [ContactsService],
   bootstrap: [AppComponent]
