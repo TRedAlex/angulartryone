@@ -30,7 +30,7 @@
     "@nguniversal/express-engine": "^9.0.2",
     "bootstrap": "^4.4.1",
     "express": "^4.15.2",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "reset-css": "^5.0.1",
     "rfs": "^9.0.2",
     "rxjs": "~6.5.4",
