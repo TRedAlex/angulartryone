@@ -29,7 +29,7 @@
     "@fortawesome/fontawesome-free": "^5.12.1",
     "@nguniversal/express-engine": "^9.0.2",
     "bootstrap": "^4.4.1",
-    "express": "^4.15.2",
+    "express": "^4.17.3",
     "jquery": "^3.4.1",
     "reset-css": "^5.0.1",
     "rfs": "^9.0.2",
