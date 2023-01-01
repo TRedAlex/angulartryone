@@ -34,12 +34,12 @@
     "reset-css": "^5.0.1",
     "rfs": "^9.0.2",
     "rxjs": "~6.5.4",
-    "sass-loader": "^8.0.2",
+    "sass-loader": "^13.2.0",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~0.900.4",
+    "@angular-devkit/build-angular": "~15.0.4",
     "@angular/cli": "~9.0.4",
     "@angular/compiler-cli": "~9.0.3",
     "@angular/language-service": "~9.0.3",
